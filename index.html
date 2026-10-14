@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mon Portfolio Freelance</title>
+  <style>
+    body { margin:0; font-family: 'Segoe UI', Arial, sans-serif; }
+
+    /* Vidéo en arrière-plan */
+    .video-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* Overlay animé */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(120deg, rgba(0,0,0,0.6), rgba(0,123,255,0.4));
+      animation: gradientMove 8s infinite alternate;
+      z-index: -1;
+    }
+    @keyframes gradientMove {
+      from { background-position: left; }
+      to { background-position: right; }
+    }
+
+    /* Navigation */
+    nav {
+      background: rgba(0,0,0,0.6);
+      padding:15px 0; position:sticky; top:0; z-index:1000;
+    }
+    nav ul {
+      list-style:none; margin:0; padding:0;
+      display:flex; justify-content:center; gap:30px;
+    }
+    nav ul li a {
+      color:white; text-decoration:none; font-size:18px; transition:0.3s;
+    }
+    nav ul li a:hover { color:#00c4ff; }
+
+    /* Accueil */
+    header {
+      color:white; text-align:center; padding:120px 20px;
+    }
+    header h1 {
+      margin:0; font-size:50px;
+      text-shadow: 0 0 10px #00c4ff, 0 0 20px #00c4ff;
+    }
+    header p { font-size:20px; margin-top:15px; }
+
+    /* Boutons */
+    .btn {
+      display:inline-block; margin:10px; padding:12px 20px;
+      background:#007BFF; color:white; border-radius:5px;
+      text-decoration:none; transition:0.3s;
+    }
+    .btn:hover {
+      background:#00c4ff;
+      box-shadow:0 0 15px #00c4ff;
+    }
+
+    /* Sections */
+    section { padding:60px 20px; text-align:center; color:white; }
+    h2 { color:#00c4ff; margin-bottom:30px; }
+
+    /* Cartes projets */
+    .projects {
+      display:flex; justify-content:center; gap:30px; flex-wrap:wrap;
+    }
+    .card {
+      background: rgba(0,0,0,0.6); padding:20px; border-radius:10px;
+      width:250px; color:white;
+      box-shadow:0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: scale(1.05); }
+
+    footer {
+      background: rgba(0,0,0,0.8); color:white; text-align:center;
+      padding:20px; margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Vidéo en arrière-plan -->
+  <video autoplay muted loop class="video-bg">
+    <source src="video/" type="video/mp4">
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
+  <div class="overlay"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Accueil -->
+  <header id="accueil">
+    <h1>Comme le Lion, je crée avec force et imagination</h1>
+    <p>Je développe des sites modernes en HTML & CSS pour entreprises en Côte d’Ivoire.</p>
+    <a href="#projets" class="btn">Voir mes projets</a>
+    <a href="#contact" class="btn">Me contacter</a>
+  </header>
+
+  <!-- Projets -->
+  <section id="projets">
+    <h2>Mes Projets</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Garage Auto</h3>
+        <p>Site vitrine pour un garage automobile.</p>
+      </div>
+      <div class="card">
+        <h3>Restaurant Local</h3>
+        <p>Page de présentation pour un restaurant.</p>
+      </div>
+      <div class="card">
+        <h3>Landing Page Promo</h3>
+        <p>Page responsive pour une campagne marketing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contactez-moi</h2>
+    <p>Email : <strong>nikiematheodorehervesaintamour@gmail.com</strong></p>
+    <p>Téléphone / WhatsApp : <strong>+225 07 15 66 79 55</strong></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Mon Portfolio Freelance - Côte d’Ivoire</p>
+  </footer>
+
+</body>
+</html>
